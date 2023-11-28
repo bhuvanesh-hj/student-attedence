@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATTENDANCE MANAGEMENT</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="text-center m-80%">
+    <h3 class="mt-2">Student Attendence Management</h3>
+    <div class="container d-flex align-items-center">
+    <div
+      class="container input-group mb-3 m-auto border border-2 rounded p-4"
+      style="width: fit-content"
+    >
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter the student name"
+        aria-label="Enter the student name"
+        aria-describedby="button-addon2"
+      />
+      <button
+        class="btn btn-outline-primary"
+        id="addStudentButton"
+        type="button"
+        id="button-addon2"
+      >
+        Add Student
+      </button>
+    </div>
+    <div class="container m-auto border border-2 rounded p-4" style="width: fit-content">
+      <div class="input-group mb-3">
+        <span class="input-group-text">Select Date:</span>
+        <input
+          type="date"
+          class="form-control"
+          id="selectdate"
+          aria-label="Enter the student name"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-primary"
+          type="button"
+          id="searchbutton"
+        >
+        Search
+        </button>
+      </div>
+      <button type="button" id="fetchbutton" class="btn btn-secondary">
+        Attendence Report
+      </button>
+    </div>
+  </div>
+
+    <table
+      class="table table-striped-columns"
+      style="width: 50%; margin: auto; margin-top: 1rem"
+      id="reportTable"
+    ></table>
+
+    <form id="form">
+      <ul
+        class="list-group mt-4 mb-3"
+        style="width: 50%; margin: auto"
+        id="attendanceList"
+      ></ul>
+      <button
+        type="submit"
+        style="margin: auto"
+        class="btn btn-primary"
+        id="submitbtn"
+      >
+        Submit Attendence
+      </button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
